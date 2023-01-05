@@ -4,13 +4,13 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class Client {
-    private long id;
+    private Long id;
     private String fullName;
     private LocalDate dateOfBirth;
     private String phoneNumber;
     private BigDecimal money;
 
-    public Client(long id, String fullName, LocalDate dateOfBirth, String phoneNumber, BigDecimal money) {
+    public Client(Long id, String fullName, LocalDate dateOfBirth, String phoneNumber, BigDecimal money) {
         this.id = id;
         this.fullName = fullName;
         this.dateOfBirth = dateOfBirth;
@@ -18,11 +18,11 @@ public class Client {
         this.money = money;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -65,6 +65,7 @@ public class Client {
                 "\nfullName: " + fullName +
                 "\ndateOfBirth: " + dateOfBirth +
                 "\nphoneNumber: " + phoneNumber +
-                "\nmoney: " + money;
+                "\nmoney: " + money+
+                "\n~~~~~~~~~~~~~~~~~~~~~~~~\n";
     }
 }
