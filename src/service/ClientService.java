@@ -15,7 +15,7 @@ public interface ClientService {
 
     Client removeClientById(Long id);
 
-    Taxi orderTaxi(Long clientId, String taxiType);
+    Taxi orderTaxi(Long clientId, String taxiType) throws Exception;
 
     Map<Integer, Client> getClientAge();
 
