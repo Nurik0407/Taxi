@@ -16,16 +16,28 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public String addClient(Client client) {
-
-        dateBase.getClientsDateBase().add(client);
-
-        return "\nClient successfully added\n";
+        for (Client client1 : dateBase.getClientsDateBase()) {
+            if (!client1.getId().equals(client.getId())) {
+                dateBase.getClientsDateBase().add(client);
+                return "\nClient successfully added\n";
+            }
+        }
+        return "\nClient unsuccessfully added!";
     }
 
     @Override
     public String addClient(List<Client> clients) {
-
-        dateBase.getClientsDateBase().addAll(clients);
+        List<Client> clientList = new ArrayList<>();
+        for (Client client : dateBase.getClientsDateBase()) {
+            for (Client client1 : clients) {
+                if (!client.getId().equals(client1.getId())) {
+                    dateBase.getClientsDateBase().add(client1);
+                } else {
+                    clientList.add(client1);
+                }
+            }
+        }
+        System.out.println("The client is not added, there is already such an id" + clientList);
 
         return "\nClients successfully added\n";
     }
@@ -41,7 +53,7 @@ public class ClientServiceImpl implements ClientService {
         for (Client client : dateBase.getClientsDateBase()) {
             if (client.getId().equals(id)) {
                 dateBase.getClientsDateBase().remove(client);
-                System.out.println("Client successfully deleted!");
+                System.out.println("\nClient successfully deleted!\n");
                 return client;
             }
         }

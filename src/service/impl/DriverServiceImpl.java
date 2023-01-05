@@ -18,7 +18,6 @@ public class DriverServiceImpl implements DriverService {
     DateBase dateBase = new DateBase();
 
 
-
     @Override
     public Driver add(Driver driver) {
         dateBase.getDriversDateBase().add(driver);
@@ -34,7 +33,7 @@ public class DriverServiceImpl implements DriverService {
     @Override
     public Driver findById(Long id) {
         Driver driver1 = dateBase.getDriversDateBase().stream().filter(driver -> driver.getID().equals(id)).findAny().get();
-        return  driver1;
+        return driver1;
     }
 
     @Override
@@ -46,12 +45,12 @@ public class DriverServiceImpl implements DriverService {
     public String assignTaxiToDriver(String taxiName, Long driverId) {
         Taxi activeTaxi = null;
         for (Taxi taxi : dateBase.getTaxisDateBase()) {
-            if (taxi.getModel().equals(taxiName)){
+            if (taxi.getModel().equals(taxiName)) {
                 activeTaxi = taxi;
             }
         }
         for (Driver driver : dateBase.getDriversDateBase()) {
-            if (Objects.equals(driver.getID(), driverId)){
+            if (Objects.equals(driver.getID(), driverId)) {
                 driver.setTaxi(activeTaxi);
             }
         }
@@ -67,11 +66,11 @@ public class DriverServiceImpl implements DriverService {
             }
         }
         Taxi taxi = dateBase.getTaxisDateBase().stream().filter(x -> x.getId().equals(taxiId)).findAny().get();
-        if (d.getTaxi() == null){
+        if (d.getTaxi() == null) {
             return "not found taxi";
         } else {
             for (Driver driver : dateBase.getDriversDateBase()) {
-                if (driver.getTaxi().equals(taxi)){
+                if (driver.getTaxi().equals(taxi)) {
                     return "taxi is busy";
                 } else {
                     d.setTaxi(taxi);
