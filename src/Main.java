@@ -61,25 +61,5 @@ public class Main {
  *  P.S. Жогорудагы берилген методдорду озгортууго болбойт, бирок кошумча метод кошсонуздар болот. **/
 
 
-        ClientServiceImpl client = new ClientServiceImpl();
-
-        Client client1 = new Client(1L, "Zholdoshov Nuradil", LocalDate.of(2004, 3, 26), "0500322332", BigDecimal.valueOf(500));
-        List<Client> clients = new ArrayList<>(Arrays.asList(
-                new Client(1L, "nxijsknc", LocalDate.of(2003, 4, 6), "7623894", BigDecimal.valueOf(600)),
-                new Client(4L,"Vyjnij",LocalDate.of(2001,5,6),"873248",BigDecimal.valueOf(600))));
-
-        System.out.println(client.addClient(client1));
-
-        System.out.println(client.addClient(clients));
-
-//        System.out.println(client.getClientAge());
-
-//        System.out.println(client.getClientByName("nxijsknc"));
-
-        System.out.println(client.removeClientById(4L));
-
-//        System.out.println(client.getClientAge());
-
-
     }
 }
