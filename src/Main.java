@@ -1,3 +1,11 @@
+import classes.Taxi;
+import dao.DateBase;
+import enums.TaxiType;
+import service.impl.TaxiServiceImpl;
+
+import java.time.LocalDate;
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -50,6 +58,32 @@ public class Main {
  *
  *  P.S. Жогорудагы берилген методдорду озгортууго болбойт, бирок кошумча метод кошсонуздар болот. **/
 
+//        TaxiServiceImpl taxiService = new TaxiServiceImpl();
+//
+//        List<Taxi> taxis = new ArrayList<>(Arrays.asList(
+//                new Taxi(1L,"BMV","08KG456AGC","RED", LocalDate.of(2019,5,6), TaxiType.COMFORT),
+//                new Taxi(2L,"LEXUS","08KG456AGC","BLACK", LocalDate.of(2016,7,6), TaxiType.BUSINESS),
+//                new Taxi(3L,"AUDI","08KG456AGC","WHITE", LocalDate.of(2006,6,6), TaxiType.STANDART),
+//                new Taxi(4L,"KIA","08KG456AGC","YELLOW", LocalDate.of(2013,4,6), TaxiType.BUSINESS),
+//                new Taxi(5L,"TOYOTA","08KG456AGC","BLUE", LocalDate.of(2014,2,6), TaxiType.COMFORT)
+//        ));
+//
+//
+//        System.out.println(taxiService.add(taxis));
+//        System.out.println(taxiService.add(new Taxi(6L, "AUDI", "08KG765DFG", "RED", LocalDate.of(2016, 5, 4), TaxiType.COMFORT)));
+//
+//        System.out.println(taxiService.grouping());
+//        System.out.println("Write taxi ID: ");
+//        long id=new Scanner(System.in).nextLong();
+//        taxiService.update(id);
+//        System.out.println(taxiService.grouping());
+//        System.out.println("Write letter:");
+//        String letter=new Scanner(System.in).next();
+//        System.out.println(taxiService.findByInitialLetter(letter));
+//        System.out.println("Write taxi type: ");
+//        String type=new Scanner(System.in).next().toUpperCase();
+//        System.out.println(taxiService.filterByTaxiType(type));
 
     }
+
 }
