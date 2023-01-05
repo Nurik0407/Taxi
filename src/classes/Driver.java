@@ -5,7 +5,7 @@ import enums.Gender;
 import java.math.BigDecimal;
 
 public class Driver {
-    private long ID;
+    private Long ID;
     private String name;
     private String surName;
     private Gender gender;
@@ -15,7 +15,7 @@ public class Driver {
     private Taxi taxi;
 
 
-    public Driver(long ID, String name, String surName, Gender gender, String phoneNumber, License license, BigDecimal money, Taxi taxi) {
+    public Driver(Long ID, String name, String surName, Gender gender, String phoneNumber, License license, BigDecimal money, Taxi taxi) {
         this.ID = ID;
         this.name = name;
         this.surName = surName;
@@ -27,11 +27,11 @@ public class Driver {
     }
 
 
-    public long getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(long ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
