@@ -2,6 +2,7 @@ package dao;
 
 import classes.Client;
 import classes.Driver;
+import classes.Taxi;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
