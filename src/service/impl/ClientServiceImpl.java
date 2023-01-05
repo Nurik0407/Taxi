@@ -19,7 +19,7 @@ public class ClientServiceImpl implements ClientService {
 
         dateBase.getClientsDateBase().add(client);
 
-        return "Client successfully added";
+        return "\nClient successfully added\n";
     }
 
     @Override
@@ -27,7 +27,7 @@ public class ClientServiceImpl implements ClientService {
 
         dateBase.getClientsDateBase().addAll(clients);
 
-        return "Clients successfully added";
+        return "\nClients successfully added\n";
     }
 
     @Override

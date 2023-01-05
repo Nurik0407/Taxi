@@ -85,7 +85,7 @@ public class DriverServiceImpl implements DriverService {
 
     @Override
     public List<Driver> getDriverByTaxiModel(String model) {
-        return dateBase.getDriversDateBase().stream().filter(driver -> driver.getTaxi().equals(model)).toList();
+        return dateBase.getDriversDateBase().stream().filter(driver -> driver.getTaxi().getModel().equals(model)).toList();
 
     }
 
