@@ -1,5 +1,11 @@
 package service;
 
+import classes.Taxi;
+import enums.TaxiType;
+
+import java.util.List;
+import java.util.Map;
+
 public interface TaxiService {
     StringBuilder add(Taxi taxi);
 
