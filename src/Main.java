@@ -1,7 +1,8 @@
-import classes.Client;
-import service.impl.ClientServiceImpl;
+import classes.Taxi;
+import dao.DateBase;
+import enums.TaxiType;
+import service.impl.TaxiServiceImpl;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,6 +10,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
+    static ClientServiceImpl client = new ClientServiceImpl();
+    static TaxiServiceImpl taxi = new TaxiServiceImpl();
     public static void main(String[] args) {
 
 /**  * Жаны проект ачып ичине томондогу класстарды тузунуз:
@@ -60,6 +63,69 @@ public class Main {
  *
  *  P.S. Жогорудагы берилген методдорду озгортууго болбойт, бирок кошумча метод кошсонуздар болот. **/
 
+//        TaxiServiceImpl taxiService = new TaxiServiceImpl();
+//
+//        List<Taxi> taxis = new ArrayList<>(Arrays.asList(
+//                new Taxi(1L,"BMV","08KG456AGC","RED", LocalDate.of(2019,5,6), TaxiType.COMFORT),
+//                new Taxi(2L,"LEXUS","08KG456AGC","BLACK", LocalDate.of(2016,7,6), TaxiType.BUSINESS),
+//                new Taxi(3L,"AUDI","08KG456AGC","WHITE", LocalDate.of(2006,6,6), TaxiType.STANDART),
+//                new Taxi(4L,"KIA","08KG456AGC","YELLOW", LocalDate.of(2013,4,6), TaxiType.BUSINESS),
+//                new Taxi(5L,"TOYOTA","08KG456AGC","BLUE", LocalDate.of(2014,2,6), TaxiType.COMFORT)
+//        ));
+//
+//
+//        System.out.println(taxiService.add(taxis));
+//        System.out.println(taxiService.add(new Taxi(6L, "AUDI", "08KG765DFG", "RED", LocalDate.of(2016, 5, 4), TaxiType.COMFORT)));
+//
+//        System.out.println(taxiService.grouping());
+//        System.out.println("Write taxi ID: ");
+//        long id=new Scanner(System.in).nextLong();
+//        taxiService.update(id);
+//        System.out.println(taxiService.grouping());
+//        System.out.println("Write letter:");
+//        String letter=new Scanner(System.in).next();
+//        System.out.println(taxiService.findByInitialLetter(letter));
+//        System.out.println("Write taxi type: ");
+//        String type=new Scanner(System.in).next().toUpperCase();
+//        System.out.println(taxiService.filterByTaxiType(type));
+
+
+        Client client1 = new Client(1L,"Saskaraeva Meerim",LocalDate.of(1995,2,5),"0500322332",BigDecimal.valueOf(500));
+
+        List<Client> clients = new ArrayList<>(Arrays.asList(
+                new Client(2L)
+        ));
+
+
+
+        while (true) {
+            System.out.println("""
+                    1-Client command
+                    2-Driver command
+                    3-Taxi command       
+                           """);
+            int i = new Scanner(System.in).nextInt();
+            switch (i) {
+                case 1 -> {
+                    System.out.println("""
+                            1-added client
+                            2-added clients
+                            3-get client by name
+                            4-remove client by id
+                            5-order taxi
+                            6-get client age
+                            7-universal sorting      
+                                  """);
+                    int t = new Scanner(System.in).nextInt();
+                    switch (t){
+                        case 1-> System.out.println(client.addClient(client1));
+                        case 2->
+                    }
+                }
+
+
+            }
 
     }
+
 }
