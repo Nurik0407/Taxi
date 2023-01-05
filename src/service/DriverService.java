@@ -1,6 +1,8 @@
 package service;
 
-import java.sql.Driver;
+
+import classes.Driver;
+
 import java.util.List;
 
 public interface DriverService {
@@ -10,7 +12,7 @@ public interface DriverService {
 
     Driver findById(Long id);
 
-    List<Driver> findByName(String name);
+    List<classes.Driver> findByName(String name);
 
     String assignTaxiToDriver(String taxiName, Long driverId);
 
