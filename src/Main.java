@@ -65,39 +65,39 @@ public class Main {
  *
  *  P.S. Жогорудагы берилген методдорду озгортууго болбойт, бирок кошумча метод кошсонуздар болот. **/
 
-        DriverServiceImpl d = new DriverServiceImpl();
-        List<Driver> driverList = new ArrayList<>(Arrays.asList(
-                new Driver(1L, "Azat", "Asanov", Gender.MAlE, "65468574", new License(13L, LocalDate.of(2015, 12, 15),
-                        LocalDate.of(2020, 01, 02)), BigDecimal.valueOf(12563), new Taxi(1L, "BMW", "21985416", "red",
-                        LocalDate.of(2020, 12, 2), TaxiType.BUSINESS)),
-                new Driver(5L, "Asan", "Azatov", Gender.MAlE, "7846", new License(13L, LocalDate.of(2015, 12, 15),
-                        LocalDate.of(2020, 01, 02)), BigDecimal.valueOf(12563), new Taxi(1L, "BMW", "21985416", "red",
-                        LocalDate.of(2020, 12, 2), TaxiType.BUSINESS)),
-                new Driver(6L, "Uson", "Usonov", Gender.MAlE, "65468574", new License(13L, LocalDate.of(2015, 12, 15),
-                        LocalDate.of(2020, 01, 02)), BigDecimal.valueOf(12563), new Taxi(1L, "BMW", "21985416", "red",
-                        LocalDate.of(2020, 12, 2), TaxiType.BUSINESS))
-
-        ));
-        Driver driver = new Driver(9L, "Uson", "Usonov", Gender.MAlE, "65468574", new License(13L, LocalDate.of(2015, 12, 15),
-                LocalDate.of(2020, 01, 02)), BigDecimal.valueOf(12563), new Taxi(9L, "BMW", "21985416", "red",
-                LocalDate.of(2020, 12, 2), TaxiType.BUSINESS));
-
-        System.out.println(d.add(driverList));
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        System.out.println(d.add(driver));
-        System.out.println("Write name: ");
-        String name = new Scanner(System.in).next();
-        System.out.println(d.findByName(name));
-        System.out.println("Write id: ");
-        long id=new Scanner(System.in).nextLong();
-        System.out.println(d.findById(id));
-        System.out.println("Write TAXI NAME: ");
-        String model = new Scanner(System.in).next();
-        System.out.println("Write driver id: ");
-        long idDriver=new Scanner(System.in).nextLong();
-        System.out.println(d.assignTaxiToDriver(model, idDriver));
-        System.out.println(d.add(driver));
-
+//        DriverServiceImpl d = new DriverServiceImpl();
+//        List<Driver> driverList = new ArrayList<>(Arrays.asList(
+//                new Driver(1L, "Azat", "Asanov", Gender.MAlE, "65468574", new License(13L, LocalDate.of(2015, 12, 15),
+//                        LocalDate.of(2020, 01, 02)), BigDecimal.valueOf(12563), new Taxi(1L, "BMW", "21985416", "red",
+//                        LocalDate.of(2020, 12, 2), TaxiType.BUSINESS)),
+//                new Driver(5L, "Asan", "Azatov", Gender.MAlE, "7846", new License(13L, LocalDate.of(2015, 12, 15),
+//                        LocalDate.of(2020, 01, 02)), BigDecimal.valueOf(12563), new Taxi(1L, "BMW", "21985416", "red",
+//                        LocalDate.of(2020, 12, 2), TaxiType.BUSINESS)),
+//                new Driver(6L, "Uson", "Usonov", Gender.MAlE, "65468574", new License(13L, LocalDate.of(2015, 12, 15),
+//                        LocalDate.of(2020, 01, 02)), BigDecimal.valueOf(12563), new Taxi(1L, "BMW", "21985416", "red",
+//                        LocalDate.of(2020, 12, 2), TaxiType.BUSINESS))
+//
+//        ));
+//        Driver driver = new Driver(9L, "Uson", "Usonov", Gender.MAlE, "65468574", new License(13L, LocalDate.of(2015, 12, 15),
+//                LocalDate.of(2020, 01, 02)), BigDecimal.valueOf(12563), new Taxi(9L, "BMW", "21985416", "red",
+//                LocalDate.of(2020, 12, 2), TaxiType.BUSINESS));
+//
+//        System.out.println(d.add(driverList));
+//        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+//        System.out.println(d.add(driver));
+//        System.out.println("Write name: ");
+//        String name = new Scanner(System.in).next();
+//        System.out.println(d.findByName(name));
+//        System.out.println("Write id: ");
+//        long id=new Scanner(System.in).nextLong();
+//        System.out.println(d.findById(id));
+//        System.out.println("Write TAXI NAME: ");
+//        String model = new Scanner(System.in).next();
+//        System.out.println("Write driver id: ");
+//        long idDriver=new Scanner(System.in).nextLong();
+//        System.out.println(d.assignTaxiToDriver(model, idDriver));
+//        System.out.println(d.add(driver));
+//
 
 
     }
