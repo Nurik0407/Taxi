@@ -96,7 +96,8 @@ public class Driver {
                 "\ngender: " + gender +
                 "\nphoneNumber: " + phoneNumber +
                 "\nlicense: " + license +
-                "\nmoney: " + money ;
+                "\nmoney: " + money +
+                "\n "+taxi;
     }
 }
 

@@ -69,6 +69,9 @@ public class Main {
  *
  *  P.S. Жогорудагы берилген методдорду озгортууго болбойт, бирок кошумча метод кошсонуздар болот. **/
 
+        System.out.println("Hello Java-8");
+
+
         Taxi taxi1 = new Taxi(6L, "AUDI", "08KG765DFG", "RED", LocalDate.of(2016, 5, 4), TaxiType.COMFORT);
 
         List<Taxi> taxis = new ArrayList<>(Arrays.asList(
