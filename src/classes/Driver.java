@@ -66,10 +66,6 @@ public class Driver {
         this.phoneNumber = phoneNumber;
     }
 
-    public License getLicense() {
-        return license;
-    }
-
     public void setLicense(License license) {
         this.license = license;
     }
