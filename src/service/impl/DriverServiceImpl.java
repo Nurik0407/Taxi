@@ -97,7 +97,5 @@ public class DriverServiceImpl implements DriverService {
         System.out.println("Write new name ");
         u.forEach(driver -> driver.setName(scanner.next()));
         System.out.println("Name update successfully");
-
-
     }
 }

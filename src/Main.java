@@ -92,7 +92,7 @@ public class Main {
 
         List<Client> clients = new ArrayList<>(Arrays.asList(
                 new Client(2L, "Koichubaev Bakas", LocalDate.of(1995, 4, 6), "0708627482", BigDecimal.valueOf(700)),
-                new Client(5L, "Shabdanov Ilim", LocalDate.of(2003, 5, 3), ")709638273", BigDecimal.valueOf(700))
+                new Client(2L, "Shabdanov Ilim", LocalDate.of(2003, 5, 3), "0709638273", BigDecimal.valueOf(700))
         ));
 
 
