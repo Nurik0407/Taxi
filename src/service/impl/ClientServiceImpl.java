@@ -14,38 +14,28 @@ public class ClientServiceImpl implements ClientService {
 
     DateBase dateBase = new DateBase();
 
+    Set<Client> clientss = new LinkedHashSet<>(dateBase.getClientsDateBase());
     @Override
     public String addClient(Client client) {
-        for (Client client1 : dateBase.getClientsDateBase()) {
-            if (!client1.getId().equals(client.getId())) {
-                dateBase.getClientsDateBase().add(client);
-                return "\nClient successfully added\n";
-            }
-        }
-        return "\nClient unsuccessfully added!";
+
+        clientss.add(client);
+        dateBase.setClientsDateBase(clientss);
+        clientss.addAll(dateBase.getClientsDateBase());
+        return "\nClient successfully added\n";
     }
 
     @Override
     public String addClient(List<Client> clients) {
-        List<Client> clientList = new ArrayList<>();
-        for (Client client : dateBase.getClientsDateBase()) {
-            for (Client client1 : clients) {
-                if (!client.getId().equals(client1.getId())) {
-                    dateBase.getClientsDateBase().add(client1);
-                } else {
-                    clientList.add(client1);
-                }
-            }
-        }
-        System.out.println("The client is not added, there is already such an id" + clientList);
 
+        clientss.addAll(clients);
+        dateBase.setClientsDateBase(clientss);
+        clientss.addAll(dateBase.getClientsDateBase());
         return "\nClients successfully added\n";
     }
 
     @Override
     public List<Client> getClientByName(String name) {
-
-        return dateBase.getClientsDateBase().stream().filter(s -> s.getFullName().endsWith(name)).toList();
+     return   dateBase.getClientsDateBase().stream().filter(s->s.getFullName().endsWith(name.toLowerCase())).toList();
     }
 
     @Override

@@ -1,5 +1,7 @@
 package classes;
 
+import dao.DateBase;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -10,7 +12,15 @@ public class Client {
     private String phoneNumber;
     private BigDecimal money;
 
-    public Client(Long id, String fullName, LocalDate dateOfBirth, String phoneNumber, BigDecimal money) {
+    DateBase dateBase = new DateBase();
+    public Client(Long id, String fullName, LocalDate dateOfBirth, String phoneNumber, BigDecimal money) throws Exception {
+        for (Client client : dateBase.getClientsDateBase()) {
+            if (!client.getId().equals(id)) {
+                this.id=id;
+            }else {
+                throw  new Exception("ID exists");
+            }
+        }
         this.id = id;
         this.fullName = fullName;
         this.dateOfBirth = dateOfBirth;
