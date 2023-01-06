@@ -45,6 +45,7 @@ public class DriverServiceImpl implements DriverService {
     public String assignTaxiToDriver(String taxiName, Long driverId) {
         Taxi activeTaxi = null;
         for (Taxi taxi : dateBase.getTaxisDateBase()) {
+            System.out.println(taxi);
             if (taxi.getModel().equals(taxiName)) {
                 activeTaxi = taxi;
             }
